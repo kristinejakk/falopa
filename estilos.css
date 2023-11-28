@@ -1,0 +1,33 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+}
+#logotipo {
+    width: 70px;
+    height: 70px;
+    background: url('../imagenes/Logotipo.png');
+    text-indent: -900px;
+    overflow: hidden;
+}
+#banner {
+    background: url('../imagenes/Banner.jpg');
+    height: 50vh;
+    background-repeat: no-repeat center;
+}
+.contenedor_banner {
+    height: 50vh;
+    background-color: rgba(26, 25, 25, 0.7);
+}
+.redes_sociales img {
+    max-width: 20%;
+    min-width: 15px;
+    height: auto;
+    margin: 0 0.2em;
+}
+
+.tarjeta {
+    background-color: aqua;
+}
+
+.oculto {
+    display: none;
+}
