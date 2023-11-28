@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="stylesheet"
+            href="css/estilos.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <title>TP2-DMM3BV</title>
+    </head>
+
+    <body>
+        <!----------------------------   Data-gym inicio ----------------------->
+        <div
+            data-gym="inicio"
+            class="container-lg p-0 rounded"
+            style="background-color: #252525"
+        >
+            <!----------------------------   Logo y alumnos ----------------------->
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark rounded">
+                <div class="container-fluid">
+                    <h1 id="logotipo">
+                        <a
+                            class="navbar-brand"
+                            href="#"
+                            >Fitness Fusion</a
+                        >
+                    </h1>
+                    <button
+                        class="btn btn-outline-success"
+                        type="button"
+                        data-gym="alumnos"
+                    >
+                        Alumnos
+                    </button>
+                </div>
+            </nav>
+
+            <!----------------------------   Banner ----------------------->
+            <section>
+                <div
+                    class="container-lg bg-dark text-white px-2 py-3 text-center rounded"
+                >
+                    <div
+                        id="banner"
+                        class="container-lg text-white"
+                    >
+                        <div
+                            class="row d-flex align-items-center justify-content-center contenedor_banner"
+                        >
+                            <div class="col-lg-6">
+                                <h2 class="display-2 text-center">
+                                    Entrená con nuestra agenda
+                                </h2>
+                                <p class="text-center">
+                                    Te presentamos una agenda virtual para que
+                                    puedas cargar acá tus entrenamientos diarios
+                                    y llevar registro de todo tu potencial.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!----------------------------   Botones ----------------------->
+            <div
+                class="container-lg p-0 bg-dark d-flex justify-content-evenly mb-2 rounded"
+            >
+                <!--  boton borrar todo -->
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary btn-lg col-3 text-white mb-3"
+                    id="eliminarTodo"
+                >
+                    Borrar todo
+                </button>
+
+                <!--  boton nuevo registro -->
+                <button
+                    type="button"
+                    class="btn btn-outline-warning btn-lg col-3 mb-3"
+                    id="nuevo"
+                >
+                    Nuevo registro
+                </button>
+            </div>
+
+            <!----------------------------   Ejemplo card ----------------------->
+            <section
+                class="container-lg pt-3 pb-5"
+                id="cards"
+            >
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title mb-3">Entrenamiento de fuerza</h2>
+
+                        <p class="card-text fw-bold">
+                            Fecha: <span class="fw-normal">10/10/2023</span>
+                        </p>
+                        <p class="card-text fw-bold">
+                            Descripción del entrenamiento:
+                            <span class="fw-normal"
+                                >Entrenamiento de fuerza miembros
+                                inferiores</span
+                            >
+                        </p>
+                        <p class="card-text fw-bold">
+                            Cantidad de repeticiones:
+                            <span class="fw-normal">16</span>
+                        </p>
+
+                        <div class="d-flex justify-content-end">
+                            <img
+                                src="imagenes/lapiz.svg"
+                                alt="ícono editar"
+                                class="me-3 editar"
+                                style="width: 2vw; height: auto"
+                            />
+                            <img
+                                src="imagenes/tacho.svg"
+                                alt="ícono eliminar"
+                                class="me-3 eliminar"
+                                style="width: 2vw; height: auto"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!----------------------------   Data-gym form ----------------------->
+
+        <div
+            data-gym="form"
+            class="container-lg p-0 rounded"
+            style="background-color: #252525"
+        >
+            <div class="col-10 mx-auto">
+                <!--  boton volver y header -->
+                <header
+                    class="container-lg bg-dark d-flex justify-content-left text-white px-1 rounded"
+                >
+                    <img
+                        src="./imagenes/volver.svg"
+                        alt="ícono volver"
+                        class="volver"
+                        style="width: 2vw; height: auto"
+                    />
+                    <h1 class="fs-3 mt-3 mb-4 mx-auto">
+                        Ingresar nuevo entrenamiento
+                    </h1>
+                </header>
+
+                <!--  form -->
+                <form>
+                    <div class="mb-2">
+                        <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Fecha"
+                            id="fecha"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-2">
+                        <textarea
+                            class="form-control"
+                            cols="30"
+                            rows="2"
+                            placeholder="Describí los ejercicios realizados"
+                            id="descripcion"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Numero de repeticiones"
+                            id="reps"
+                            required
+                        />
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <input
+                            class="btn btn-warning mb-4 mt-3"
+                            type="submit"
+                            value="Guardar"
+                        />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!----------------------------   Data-gym alumnos ----------------------->
+        <div
+            data-gym="alumnos"
+            class="container-lg p-0 rounded"
+            style="background-color: #252525"
+            <div
+            class="col-10 mx-auto"
+        >
+            <!--  boton cerrar y header -->
+            <header
+                class="container-lg bg-dark d-flex justify-content-left text-white px-1 rounded"
+            >
+                <h1 class="fs-3 mt-3 mb-2 mx-auto">Nuestro equipo</h1>
+                <img
+                    src="imagenes/cerrar.svg"
+                    alt="ícono volver"
+                    class="cerrar me-2"
+                    style="width: 2vw; height: auto"
+                />
+            </header>
+
+            <!-- fotos -->
+            <div class="row m-3 d-flex justify-content-center">
+                <div class="col-12 col-sm-6 col-md-3 text-center text-white">
+                    <img
+                        src="imagenes/200x200-1.jpg"
+                        alt="rocio cuello"
+                    />
+                    <h3 class="mt-1 fs-5">Rocio Cuello</h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 text-center text-white">
+                    <img
+                        src="imagenes/200x200-2.jpg"
+                        alt="kris jakobsen"
+                    />
+                    <h3 class="mt-1 fs-5">Kris Jakobsen</h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 text-center text-white">
+                    <img
+                        src="imagenes/200x200-3.jpg"
+                        alt="juan panno"
+                    />
+                    <h3 class="mt-1 fs-5">Juan Panno</h3>
+                </div>
+            </div>
+
+            <!--  info alumnos -->
+            <div class="text-white bg-light">
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Comisión:</span> DMM3BV
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Materia:</span> Diseño y
+                        Programación Web I
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Docente:</span> Omar Toyos
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Año:</span> 2023
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!----------------------------   Data-gym editar ----------------------->
+        <div
+            data-gym="modificar"
+            class="container-lg p-0 rounded"
+            style="background-color: #252525"
+            <div
+            class="col-10 mx-auto"
+        >
+            <!--  boton volver y modificar -->
+            <header
+                class="container-lg bg-dark text-white px-2 py-3 text-center position-relative"
+            >
+                <h1 class="fs-5 mb-0">Modificar entrenamiento</h1>
+
+                <img
+                    src="imagenes/volver.svg"
+                    alt="ícono volver"
+                    class="volver"
+                    style="width: 2vw; height: auto"
+                />
+            </header>
+
+            <section class="container-lg py-5">
+                <form>
+                    <div class="mb-2">
+                        <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Fecha"
+                            id="fecha"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-2">
+                        <textarea
+                            class="form-control"
+                            cols="30"
+                            rows="2"
+                            placeholder="Describí los ejercicios realizados"
+                            id="descripcion"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="mb-2">
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Numero de repeticiones"
+                            id="reps"
+                            required
+                        />
+                    </div>
+
+                    <div class="d-flex justify-content-end clearfix">
+                        <input
+                            type="submit"
+                            value="Guardar cambios"
+                            class="btn btn-warning mb-4 mt-3"
+                        />
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="js/main2.js"></script>
+    </body>
+</html>
