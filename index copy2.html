@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
+        <link
+            rel="stylesheet"
+            href="css/estilos.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <title>TP2-DMM3BV</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="container">
+                    <h1 id="logotipo">
+                        <a
+                            class="navbar-brand"
+                            href="#"
+                            >Fitness Fusion</a
+                        >
+                    </h1>
+                    <button class="btn btn-outline-success ml-auto " type="button" data-gym="alumnos">Alumnos</button>
+                   
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarNav"
+                    >
+                      <!--   <ul class="navbar-nav ms-auto">
+                           
+                            <li class="nav-item">
+                                <a
+                                    class="nav-link active"
+                                    href="#alumnos"
+                                >
+                                    <span
+                                        data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-collapse"
+                                        >Alumnos</span
+                                    >
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <!---------------------------  banner  ----------------------------->
+            <section
+                data-gym="banner" id="banner"
+                class="container-lg text-white"
+            >
+                <div
+                    class="row d-flex align-items-center justify-content-center contenedor_banner"
+                >
+                    <div class="col-lg-6">
+                        <h2 class="display-2 text-center">
+                            Entrená con pasión
+                        </h2>
+                        <p class="text-center">
+                            Unite a nuestra comunidad fitness y vive una vida
+                            activa y saludable.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!---------------------------  agenda  ----------------------------->
+
+            <section>
+                    <div data-gym="agenda"
+                    class="row container-lg mx-auto">
+                        <h2 class="text-center display-5 mt-5 fw-bold">Agenda</h2>
+
+                        <!--  texto descriptivo -->
+                        <div class="row m-3">
+                            <div class="col-12 text-left">
+                                <p class="mb-3">
+                                    Te presentamos una agenda virtual para que puedas
+                                    cargar acá tus entrenamientos diarios y llevar
+                                    registro de todo tu potencial.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            
+   <!--  boton ingresar -->
+                <div data-gym="nuevo" class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-warning" type="button">Ingresar</button>
+                </div>
+
+                <!--------- form --------->
+                <div data-gym="form" class=" oculto col-10 mx-auto">
+                    <h1 class="fs-5 mb-0">Ingresar Alumno</h1>
+            
+                    <img src="./imagenes/volver.svg" alt="ícono volver" class="volver">
+                    <form>
+                        <div class="mb-2">
+                            <input
+                                type="date"
+                                class="form-control"
+                                placeholder="Fecha"
+                                id="fecha"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <textarea
+                                class="form-control"
+                                cols="30"
+                                rows="2"
+                                placeholder="Describí los ejercicios realizados"
+                                id="descripcion"
+                                required
+                            ></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <input
+                                type="number"
+                                class="form-control"
+                                placeholder="Numero de repeticiones"
+                                id="reps"
+                                required
+                            />
+                        </div>
+                        <input
+                            class="btn btn-dark mb-4 mt-3"
+                            type="submit"
+                            value="Guardar"
+                        />
+                    </form>
+                </div>
+            </section>
+
+            <section data-gym="info">
+                <div
+                    class="tarjeta card mb-3 mt-3 mx-auto bg-body-secondary "
+                    style="width: 80vw;"
+                  
+                >
+                <header class="container-lg bg-dark text-white px-2 py-3 text-center">
+                    <h1 class="fs-5 mb-0">Entrenamientos</h1>
+                    <div class="card-body ">
+                        <h2 class="fecha card-title h6 mb-2">Fecha</h5>
+                        <p class="ejercicio card-text mb-1">
+                            Ejercicios realidazos
+                        </p>
+                        <p class="reps card-text mb-1">
+                            numero de reps
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <img src="imagenes/editar.svg" alt="ícono editar" class="me-3 editar">                      
+                            <img src="imagenes/borrar.svg" alt="ícono eliminar" class="eliminar">
+                        </div>
+
+                    </div>
+                </div>
+               
+               
+            </section>
+        </main>
+
+        <!-----------------------  alumnos y demas ---------------------------->
+        <section
+            data-gym="alumnos"
+            class="container-lg oculto"
+        >
+            <!-- fotos -->
+            <div class="row m-3">
+                <h2 class="mt-5 mb-4 pb-2 border-bottom border-warning fw-bold">
+                    Alumnos
+                </h2>
+                <div class="col-12 col-sm-6 col-md-3 text-center">
+                    <img
+                        src="imagenes/200x200-1.jpg"
+                        alt="rocio cuello"
+                    />
+                    <h3 class="mt-3">Rocio Cuello</h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 text-center">
+                    <img
+                        src="imagenes/200x200-2.jpg"
+                        alt="kris jakobsen"
+                    />
+                    <h3 class="mt-3">Kris Jakobsen</h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 text-center">
+                    <img
+                        src="imagenes/200x200-3.jpg"
+                        alt="juan panno"
+                    />
+                    <h3 class="mt-3">Juan Panno</h3>
+                </div>
+            </div>
+            <!-- info cursada -->
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Integrantes:</span>
+                        <ul style="list-style-type: square">
+                            <li>Rocio Cuello</li>
+                            <li>Kristine Jakobsen</li>
+                            <li>Juan Panno</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Comisión:</span> DMM3BV
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Materia:</span> Diseño y
+                        Programación Web I
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Docente:</span> Omar Toyos
+                    </li>
+                    <li class="list-group-item bg-transparent border-black">
+                        <span class="fw-bold">Año:</span> 2023
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer
+            id="footer"
+            class="container-fluid text-bg-dark"
+        >
+            <div class="container-lg">
+                <div
+                    class="row d-flex align-items-center justify-content-space-between"
+                >
+                    <div class="col-10 p-s-5">
+                        <p class="my-1">Escuela Da Vinci</p>
+                        <p class="my-1">Todos los derechos reservados</p>
+                    </div>
+                    <div class="redes_sociales col-2">
+                        <a href="https://www.facebook.com/"
+                            ><img
+                                src="imagenes/Logo_facebook.png"
+                                alt="logotipo de facebook"
+                        /></a>
+                        <a href="https://www.instagram.com/"
+                            ><img
+                                src="imagenes/Logo_instagram.png"
+                                alt="logotipo de instagram"
+                        /></a>
+                        <a href="https://twitter.com/"
+                            ><img
+                                src="imagenes/Logo_twitter.png"
+                                alt="logotipo de twitter"
+                        /></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- bootstrap -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="js/main2.js"></script>
+    </body>
+</html>
